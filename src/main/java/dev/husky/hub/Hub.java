@@ -1,12 +1,20 @@
 package dev.husky.hub;
 
+import dev.husky.hub.utils.FileConfig;
+import lombok.Getter;
+import lombok.Setter;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class Hub extends JavaPlugin {
+@Getter @Setter
+public class Hub extends JavaPlugin {
+
+    @Getter public static Hub instance;
+
+    private FileConfig scoreboardConfig;
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        instance = this;
 
     }
 
