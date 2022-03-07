@@ -3,6 +3,8 @@ package dev.husky.hub;
 import dev.husky.hub.config.FileManager;
 import dev.husky.hub.config.ScoreboardConfig;
 import dev.husky.hub.hooks.PlaceholderAPIHook;
+import dev.husky.hub.hooks.ScoreboardHook;
+import dev.husky.hub.hooks.TablistHook;
 import dev.husky.hub.utils.FileConfig;
 import dev.husky.hub.utils.rank.RankManager;
 import dev.husky.hub.utils.scoreboard.Scoreboard;
@@ -25,6 +27,8 @@ public class Hub extends JavaPlugin {
     public void onEnable() {
         instance = this;
         PlaceholderAPIHook.init();
+        TablistHook.init();
+        ScoreboardHook.init();
         fileManager.init(this);
     }
 
