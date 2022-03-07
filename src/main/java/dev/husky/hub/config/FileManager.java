@@ -39,6 +39,8 @@ public class FileManager {
     public void loadConfigs() {
         ScoreboardConfig.init();
         TablistConfig.init();
+        MainConfig.init();
+        MessagesConfig.init();
     }
 
 }
