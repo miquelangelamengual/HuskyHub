@@ -1,12 +1,52 @@
 HOTBAR:
-  ENDERBUTT:
+  ENDER_BUTT:
     ENABLE: true
-    NAME: "EnderButt"
-    MATERIAL: "ENCHANTED_BOOK"
+    NAME: "&3EnderButt &7(Right Click)"
+    MATERIAL: "ENDER_PEARL"
     DATA: 0
     SLOT: 1
     AMOUNT: 1
+    VELOCITY: 2.0
+    SOUND: "ENDERMAN_TELEPORT"
     LORE:
       - ""
-      - "EnderButt"
+
+  SERVER_SELECTOR:
+    ENABLE: true
+    NAME: "&3Server Selector &7(Right Click)"
+    MATERIAL: "COMPASS"
+    DATA: 0
+    SLOT: 2
+    AMOUNT: 1
+    LORE:
+      - ""
+
+  LOBBY_SELECTOR:
+    ENABLE: true
+    MATERIAL: "NETHER_STAR"
+    DATA: 0
+    NAME: "&3Lobby Selector &7(Right Click)"
+    SLOT: 9
+    AMOUNT: 1
+    LORE:
+      - ""
+
+  VISIBILITY_TOGGLE_ON:
+    ENABLE: true
+    NAME: "&3Visibility&7: &aAll &7(Right Click)"
+    MATERIAL: "INK_SACK"
+    DATA: 10
+    AMOUNT: 1
+    SLOT: 8
+    LORE:
+      - ""
+
+  VISIBILITY_TOGGLE_OFF:
+    ENABLE: true
+    NAME: "&3Visibility&7: &cNobody &7(Right Click)"
+    MATERIAL: "INK_SACK"
+    DATA: 8
+    AMOUNT: 1
+    SLOT: 8
+    LORE:
       - ""
