@@ -22,7 +22,6 @@ public class Hub extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
-
     }
 
     @Override
