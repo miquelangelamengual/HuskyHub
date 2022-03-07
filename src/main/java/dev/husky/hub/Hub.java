@@ -1,5 +1,7 @@
 package dev.husky.hub;
 
+import dev.husky.hub.config.FileManager;
+import dev.husky.hub.config.ScoreboardConfig;
 import dev.husky.hub.utils.FileConfig;
 import dev.husky.hub.utils.rank.RankManager;
 import dev.husky.hub.utils.scoreboard.Scoreboard;
@@ -16,12 +18,12 @@ public class Hub extends JavaPlugin {
     private RankManager rankManager;
     private Scoreboard scoreboard;
     private Porc tablist;
-
-    private FileConfig scoreboardConfig;
+    private FileManager fileManager;
 
     @Override
     public void onEnable() {
         instance = this;
+        fileManager.init(this);
     }
 
     @Override
