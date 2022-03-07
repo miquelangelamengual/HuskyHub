@@ -2,6 +2,7 @@ package dev.husky.hub;
 
 import dev.husky.hub.config.FileManager;
 import dev.husky.hub.config.ScoreboardConfig;
+import dev.husky.hub.hooks.PlaceholderAPIHook;
 import dev.husky.hub.utils.FileConfig;
 import dev.husky.hub.utils.rank.RankManager;
 import dev.husky.hub.utils.scoreboard.Scoreboard;
@@ -23,6 +24,7 @@ public class Hub extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        PlaceholderAPIHook.init();
         fileManager.init(this);
     }
 
