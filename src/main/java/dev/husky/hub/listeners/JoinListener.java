@@ -29,6 +29,7 @@ public class JoinListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+        event.setJoinMessage(null);
 
         if (MainConfig.JOIN_MESSAGE) {
             for (String str : MainConfig.JOIN_MESSAGE_LIST) {
