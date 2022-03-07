@@ -5,6 +5,7 @@ import dev.husky.hub.config.ScoreboardConfig;
 import dev.husky.hub.hooks.PlaceholderAPIHook;
 import dev.husky.hub.hooks.ScoreboardHook;
 import dev.husky.hub.hooks.TablistHook;
+import dev.husky.hub.queue.QueueManager;
 import dev.husky.hub.utils.FileConfig;
 import dev.husky.hub.utils.rank.RankManager;
 import dev.husky.hub.utils.scoreboard.Scoreboard;
@@ -19,6 +20,7 @@ public class Hub extends JavaPlugin {
     @Getter public static Hub instance;
 
     private RankManager rankManager;
+    private QueueManager queueManager;
     private Scoreboard scoreboard;
     private Porc tablist;
     private FileManager fileManager;

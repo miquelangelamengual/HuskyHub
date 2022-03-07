@@ -1,0 +1,18 @@
+SCOREBOARD:
+  ENABLE: true
+  TITLE: "HuskyCommunity | Hub"
+
+  MAIN:
+    - "Player: %PLAYER%"
+    - "Rank: %RANK%"
+    - "Ping: %PING%"
+    - ""
+    - "Players: %bungee_total%"
+    - "Hub: Hub-1"
+    - ""
+    - "huskycommunity.org"
+
+  QUEUE:
+    - "Queue Information:"
+    - "Server: %SERVER%"
+    - "Position: %POSITION%/%TOTAL%"
