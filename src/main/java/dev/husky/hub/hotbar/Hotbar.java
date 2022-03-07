@@ -1,9 +1,5 @@
 package dev.husky.hub.hotbar;
 
-import dev.husky.hub.config.HotbarConfig;
-import dev.husky.hub.utils.ItemBuilder;
-import dev.husky.hub.utils.Utils;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -23,19 +19,18 @@ public class Hotbar {
     private ItemStack show;
 
     public void init() {
-        if (HotbarConfig.isEnabled("ENDERBUTT")) {
-            enderbutt = new ItemBuilder(Material.getMaterial(HotbarConfig.getMaterial("ENDERBUTT")))
-                    .data(HotbarConfig.getData("ENDERBUTT"))
-                    .name(Utils.translate(HotbarConfig.getName("ENDERBUTT")))
-                    .amount(HotbarConfig.getAmount("ENDERBUTT"))
-                    .lore()
-                    .build();
+        if (HotbarItem.isEnabled("ENDERBUTT")) {
+            enderbutt = HotbarItem.createItem("ENDERBUTT");
+        }
+
+        if (HotbarItem.isEnabled("SERVER_SELECTOR")) {
+            serverSelector = HotbarItem.createItem("SERVER_SELECTOR");
         }
     }
 
     public void givePlayerItems(Player player) {
-        if (HotbarConfig.isEnabled("ENDERBUTT")) {
-            player.getInventory().setItem(HotbarConfig.getSlot("ENDERBUTT") -1, enderbutt);
+        if (HotbarItem.isEnabled("ENDERBUTT")) {
+            player.getInventory().setItem(HotbarItem.getSlot("ENDERBUTT") -1, enderbutt);
         }
     }
 }
