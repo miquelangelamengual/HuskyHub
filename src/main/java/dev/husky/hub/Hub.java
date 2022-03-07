@@ -5,8 +5,10 @@ import dev.husky.hub.config.ScoreboardConfig;
 import dev.husky.hub.hooks.PlaceholderAPIHook;
 import dev.husky.hub.hooks.ScoreboardHook;
 import dev.husky.hub.hooks.TablistHook;
+import dev.husky.hub.hotbar.Hotbar;
 import dev.husky.hub.queue.QueueManager;
 import dev.husky.hub.utils.FileConfig;
+import dev.husky.hub.utils.command.CommandManager;
 import dev.husky.hub.utils.rank.RankManager;
 import dev.husky.hub.utils.scoreboard.Scoreboard;
 import es.hulk.tablist.Porc;
@@ -21,9 +23,9 @@ public class Hub extends JavaPlugin {
 
     private RankManager rankManager;
     private QueueManager queueManager;
-    private Scoreboard scoreboard;
-    private Porc tablist;
     private FileManager fileManager;
+    private Hotbar hotbar;
+    private CommandManager commandManager;
 
     @Override
     public void onEnable() {
@@ -32,11 +34,19 @@ public class Hub extends JavaPlugin {
         TablistHook.init();
         ScoreboardHook.init();
         fileManager.init(this);
+        this.loadManagers();
+    }
+
+    private void loadManagers() {
+        this.rankManager = new RankManager();
+        this.queueManager = new QueueManager();
+        this.hotbar = new Hotbar();
+        this.commandManager = new CommandManager(this);
     }
 
     @Override
     public void onDisable() {
-        this.tablist.disable();
-        this.scoreboard.getBoards().clear();
+        ScoreboardHook.getScoreboard().getBoards().clear();
+        TablistHook.getTablist().disable();
     }
 }
