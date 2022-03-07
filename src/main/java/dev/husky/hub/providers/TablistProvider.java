@@ -1,10 +1,7 @@
 package dev.husky.hub.providers;
 
-import dev.husky.hub.Hub;
-import dev.husky.hub.config.FileManager;
 import dev.husky.hub.config.TablistConfig;
 import dev.husky.hub.hooks.PlaceholderAPIHook;
-import dev.husky.hub.utils.FileConfig;
 import dev.husky.hub.utils.ServerUtil;
 import es.hulk.tablist.objects.TabColumn;
 import es.hulk.tablist.objects.TabLayout;
@@ -12,7 +9,6 @@ import es.hulk.tablist.skin.Skin;
 import es.hulk.tablist.utils.TabProvider;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
@@ -28,8 +24,6 @@ import java.util.Set;
  */
 
 public class TablistProvider implements TabProvider {
-
-    private final FileConfig config = Hub.getInstance().getFileManager().getTablistConfig();
 
     @Override
     public Set<TabLayout> getProvider(Player player) {
@@ -174,7 +168,7 @@ public class TablistProvider implements TabProvider {
     public List<String> getFooter(Player player) {
         List<String> footer = new ArrayList<>();
 
-        for (String str : config.getStringList("TABLIST.FOOTER")) {
+        for (String str : TablistConfig.FOOTER) {
             footer.add(ServerUtil.replaceText(player, str));
             if (PlaceholderAPIHook.isPlaceholderAPI()) {
                 footer.add(PlaceholderAPI.setPlaceholders(player, str));
@@ -188,7 +182,7 @@ public class TablistProvider implements TabProvider {
     public List<String> getHeader(Player player) {
         List<String> header = new ArrayList<>();
 
-        for (String str : config.getStringList("TABLIST.HEADER")) {
+        for (String str : TablistConfig.HEADER) {
             header.add(ServerUtil.replaceText(player, str));
             if (PlaceholderAPIHook.isPlaceholderAPI()) {
                 header.add(PlaceholderAPI.setPlaceholders(player, str));
