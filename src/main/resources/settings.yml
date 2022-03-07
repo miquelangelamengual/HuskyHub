@@ -4,3 +4,21 @@ SOCIAL:
   WEBSITE: "huskycommunity.org"
   STORE: "store.huskycommunity.org"
   TEAMSPEAK: "ts.huskycommunity.org"
+
+JOIN_MESSAGE:
+  ENABLE: true
+  MESSAGE:
+    - ""
+    - "Join Message"
+    - ""
+
+VIP_JOIN:
+  ENABLE: true
+  PERMISSIONS: "huskyhub.vip"
+  JOIN: "Vip Join"
+  LEAVE: "Vip Leave"
+
+TIME:
+  ZONE: "Europe/Madrid"
+  DATE: "dd/MM/yyyy"
+  HOUR: "HH:mm:ss"
