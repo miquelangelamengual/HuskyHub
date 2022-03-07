@@ -49,119 +49,118 @@ public class TablistProvider implements TabProvider {
     public Skin getSkin(Player player, String skinTab) {
         Skin skinDefault = Skin.DEFAULT;
 
-        if (skinTab.contains("%player%")) {
+        if (skinTab.contains("%PLAYER%")) {
             skinDefault = Skin.getSkin(player);
         }
-        if (skinTab.contains("%discord%")) {
+        if (skinTab.contains("%DISCORD%")) {
             skinDefault = Skin.DISCORD_SKIN;
         }
-        if (skinTab.contains("%youtube%")) {
+        if (skinTab.contains("%YOUTUBE%")) {
             skinDefault = Skin.YOUTUBE_SKIN;
         }
-        if (skinTab.contains("%twitter%")) {
+        if (skinTab.contains("%TWITTER%")) {
             skinDefault = Skin.TWITTER_SKIN;
 
         }
-        if (skinTab.contains("%facebook%")) {
+        if (skinTab.contains("%FACEBOOK%")) {
             skinDefault = Skin.FACEBOOK_SKIN;
 
         }
-        if (skinTab.contains("%store%")) {
+        if (skinTab.contains("%STORE%")) {
             skinDefault = Skin.STORE_SKIN;
         }
 
-        if (skinTab.contains("%green%")) {
+        if (skinTab.contains("%GREEN%")) {
             skinDefault = Skin.getDot(ChatColor.GREEN);
         }
-        if (skinTab.contains("%blue%")) {
+        if (skinTab.contains("%BLUE%")) {
             skinDefault = Skin.getDot(ChatColor.BLUE);
         }
-        if (skinTab.contains("%dark_blue%")) {
+        if (skinTab.contains("%DARK_BLUE%")) {
             skinDefault = Skin.getDot(ChatColor.DARK_BLUE);
         }
-        if (skinTab.contains("%dark_aqua%")) {
+        if (skinTab.contains("%DARK_AQUA%")) {
             skinDefault = Skin.getDot(ChatColor.DARK_AQUA);
         }
-        if (skinTab.contains("%dark_purple%")) {
+        if (skinTab.contains("%DARK_PURPLE%")) {
             skinDefault = Skin.getDot(ChatColor.DARK_PURPLE);
         }
-        if (skinTab.contains("%light_purple%")) {
+        if (skinTab.contains("%LIGHT_PURPLE%")) {
             skinDefault = Skin.getDot(ChatColor.LIGHT_PURPLE);
         }
-        if (skinTab.contains("%gray%")) {
+        if (skinTab.contains("%GRAY%")) {
             skinDefault = Skin.getDot(ChatColor.GRAY);
         }
-        if (skinTab.contains("%red%")) {
+        if (skinTab.contains("%RED%")) {
             skinDefault = Skin.getDot(ChatColor.RED);
         }
-        if (skinTab.contains("%yellow%")) {
+        if (skinTab.contains("%YELLOW%")) {
             skinDefault = Skin.getDot(ChatColor.YELLOW);
         }
-        if (skinTab.contains("%dark_green%")) {
+        if (skinTab.contains("%DARK_GREEN%")) {
             skinDefault = Skin.getDot(ChatColor.DARK_GREEN);
         }
-        if (skinTab.contains("%dark_red%")) {
+        if (skinTab.contains("%DARK_RED%")) {
             skinDefault = Skin.getDot(ChatColor.DARK_RED);
         }
-        if (skinTab.contains("%gold%")) {
+        if (skinTab.contains("%GOLD%")) {
             skinDefault = Skin.getDot(ChatColor.GOLD);
         }
-        if (skinTab.contains("%aqua%")) {
+        if (skinTab.contains("%AQUA%")) {
             skinDefault = Skin.getDot(ChatColor.AQUA);
         }
-        if (skinTab.contains("%white%")) {
+        if (skinTab.contains("%WHITE%")) {
             skinDefault = Skin.getDot(ChatColor.WHITE);
         }
-        if (skinTab.contains("%dark_gray%")) {
+        if (skinTab.contains("%DARK_GRAY%")) {
             skinDefault = Skin.getDot(ChatColor.DARK_GRAY);
         }
-        if (skinTab.contains("%black%")) {
+        if (skinTab.contains("%BLACK%")) {
             skinDefault = Skin.getDot(ChatColor.BLACK);
         }
-        if (skinTab.contains("%warning%")) {
+        if (skinTab.contains("%WARNING%")) {
             skinDefault = Skin.WARNING_SKIN;
         }
-        if (skinTab.contains("%website%")) {
+        if (skinTab.contains("%WEBSITE%")) {
             skinDefault = Skin.WEBSITE_SKIN;
         }
-        if (skinTab.contains("%queue%")) {
+        if (skinTab.contains("%QUEUE%")) {
             skinDefault = Skin.QUEUE_SKIN;
         }
-        if (skinTab.contains("%information%")) {
+        if (skinTab.contains("%INFORMATION%")) {
             skinDefault = Skin.INFORMATION_SKIN;
         }
-        if (skinTab.contains("%wood_shield%")) {
+        if (skinTab.contains("%WOOD_SHIELD%")) {
             skinDefault = Skin.WOOD_SHIELD_SKIN;
         }
-        if (skinTab.contains("%diamond_shield%")) {
+        if (skinTab.contains("%DIAMOND_SHIELD%")) {
             skinDefault = Skin.DIAMOND_SHIELD_SKIN;
         }
-        if (skinTab.contains("%bow%")) {
+        if (skinTab.contains("%BOW%")) {
             skinDefault = Skin.BOW_SKIN;
         }
-        if (skinTab.contains("%potion%")) {
+        if (skinTab.contains("%POTION%")) {
             skinDefault = Skin.POTION_SKIN;
         }
-        if (skinTab.contains("%telegram%")) {
+        if (skinTab.contains("%TELEGRAM%")) {
             skinDefault = Skin.TELEGRAM_SKIN;
         }
-        if (skinTab.contains("%enderchest%")) {
+        if (skinTab.contains("%ENDERCHEST%")) {
             skinDefault = Skin.ENDERCHEST_SKIN;
         }
-        if (skinTab.contains("%coin%")) {
+        if (skinTab.contains("%COIN%")) {
             skinDefault = Skin.COIN_SKIN;
         }
-        if (skinTab.contains("%heart%")) {
+        if (skinTab.contains("%HEART%")) {
             skinDefault = Skin.HEART_SKIN;
         }
-        if (skinTab.contains("%earth%")) {
+        if (skinTab.contains("%EARTH%")) {
             skinDefault = Skin.EARTH_SKIN;
         }
-        if (skinTab.contains("%crown%")) {
+        if (skinTab.contains("%CROWN%")) {
             skinDefault = Skin.CROWN_SKIN;
         }
-
-        return Skin.DEFAULT;
+        return skinDefault;
     }
 
     @Override
