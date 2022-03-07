@@ -17,13 +17,13 @@ public class ScoreboardAnimation {
     public static String title, footer;
 
     public static void init() {
-        List<String> titles = Hub.getInstance().getScoreboardConfig().getStringList("ANIMATED_SCOREBOARD.TITLE.LINES");
-        List<String> footers = Hub.getInstance().getScoreboardConfig().getStringList("ANIMATED_SCOREBOARD.FOOTER.LINES");
+        List<String> titles = Hub.getInstance().getFileManager().getScoreboardConfig().getStringList("ANIMATED_SCOREBOARD.TITLE.LINES");
+        List<String> footers = Hub.getInstance().getFileManager().getScoreboardConfig().getStringList("ANIMATED_SCOREBOARD.FOOTER.LINES");
 
         title = titles.get(0);
         footer = footers.get(0);
 
-        if (Hub.getInstance().getScoreboardConfig().getBoolean("ANIMATED_SCOREBOARD.TITLE.ENABLE")) {
+        if (Hub.getInstance().getFileManager().getScoreboardConfig().getBoolean("ANIMATED_SCOREBOARD.TITLE.ENABLE")) {
             AtomicInteger atomicInteger = new AtomicInteger();
 
             Hub.getInstance().getServer().getScheduler().runTaskTimerAsynchronously(Hub.getInstance(), () -> {
@@ -31,10 +31,10 @@ public class ScoreboardAnimation {
 
                 title = titles.get(atomicInteger.getAndIncrement());
 
-            }, 0L, (long) (Hub.getInstance().getScoreboardConfig().getDouble("ANIMATED_SCOREBOARD.TITLE.TIME") * 20L));
+            }, 0L, (long) (Hub.getInstance().getFileManager().getScoreboardConfig().getDouble("ANIMATED_SCOREBOARD.TITLE.TIME") * 20L));
         }
 
-        if (Hub.getInstance().getScoreboardConfig().getBoolean("ANIMATED_SCOREBOARD.FOOTER.ENABLE")) {
+        if (Hub.getInstance().getFileManager().getScoreboardConfig().getBoolean("ANIMATED_SCOREBOARD.FOOTER.ENABLE")) {
             AtomicInteger atomicInteger = new AtomicInteger();
 
             Hub.getInstance().getServer().getScheduler().runTaskTimerAsynchronously(Hub.getInstance(), () -> {
@@ -42,7 +42,7 @@ public class ScoreboardAnimation {
 
                 footer = footers.get(atomicInteger.getAndIncrement());
 
-            }, 0L, (long) (Hub.getInstance().getScoreboardConfig().getDouble("ANIMATED_SCOREBOARD.FOOTER.TIME") * 20L));
+            }, 0L, (long) (Hub.getInstance().getFileManager().getScoreboardConfig().getDouble("ANIMATED_SCOREBOARD.FOOTER.TIME") * 20L));
         }
     }
 

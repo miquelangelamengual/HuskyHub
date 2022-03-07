@@ -21,5 +21,7 @@ public class MainConfig {
         WEBSITE = config.getString("SOCIAL.WEBSITE");
         TEAMSPEAK = config.getString("SOCIAL.TEAMSPEAK");
         TWITTER = config.getString("SOCIAL.TWITTER");
+
+
     }
 }

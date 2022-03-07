@@ -1,0 +1,12 @@
+HOTBAR:
+  ENDERBUTT:
+    ENABLE: true
+    NAME: "EnderButt"
+    MATERIAL: "ENCHANTED_BOOK"
+    DATA: 0
+    SLOT: 1
+    AMOUNT: 1
+    LORE:
+      - ""
+      - "EnderButt"
+      - ""
