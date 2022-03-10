@@ -29,4 +29,12 @@ public class HotbarItem {
                 .build();
     }
 
+    public static int getEnderbuttMultiplier(String hotbarItem) {
+        return config.getInt("HOTBAR." + hotbarItem + ".VELOCITY");
+    }
+
+    public static String getSound(String hotbarItem) {
+        return config.getString("HOTBAR." + hotbarItem + ".SOUND");
+    }
+
 }
