@@ -2,8 +2,8 @@ package dev.husky.hub.hotbar;
 
 import dev.husky.hub.Hub;
 import dev.husky.hub.config.MessagesConfig;
-import dev.husky.hub.menus.LobbyMenu;
-import dev.husky.hub.menus.ServerMenu;
+import dev.husky.hub.menus.lobby.menu.LobbyMenu;
+import dev.husky.hub.menus.server.menu.ServerMenu;
 import dev.husky.hub.utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

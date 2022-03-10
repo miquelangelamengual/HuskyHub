@@ -6,6 +6,9 @@ import dev.husky.hub.hooks.PlaceholderAPIHook;
 import dev.husky.hub.hooks.ScoreboardHook;
 import dev.husky.hub.hooks.TablistHook;
 import dev.husky.hub.hotbar.Hotbar;
+import dev.husky.hub.menus.lobby.Lobby;
+import dev.husky.hub.menus.lobby.LobbyManager;
+import dev.husky.hub.menus.server.ServerManager;
 import dev.husky.hub.queue.QueueManager;
 import dev.husky.hub.utils.FileConfig;
 import dev.husky.hub.utils.command.CommandManager;
@@ -26,6 +29,8 @@ public class Hub extends JavaPlugin {
     private FileManager fileManager;
     private Hotbar hotbar;
     private CommandManager commandManager;
+    private ServerManager serverManager;
+    private LobbyManager lobbyManager;
 
     @Override
     public void onEnable() {
@@ -42,6 +47,8 @@ public class Hub extends JavaPlugin {
         this.queueManager = new QueueManager();
         this.hotbar = new Hotbar();
         this.commandManager = new CommandManager(this);
+        this.serverManager = new ServerManager();
+        this.lobbyManager = new LobbyManager();
     }
 
     @Override

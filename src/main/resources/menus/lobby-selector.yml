@@ -1,0 +1,15 @@
+LOBBY_SELECTOR:
+  TITLE: "TITLE"
+  SIZE: 27
+  ITEMS:
+    HUB-1:
+      DISPLAY_NAME: "&aNombre"
+      MATERIAL: WOOL
+      DATA: 0
+      DESCRIPTION:
+        - ""
+        - "Lore 1"
+        - "Lore 2"
+        - ""
+      QUEUE: true
+      SERVER: "Hub-1"
