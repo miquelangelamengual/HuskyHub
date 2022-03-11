@@ -9,6 +9,7 @@ import dev.husky.hub.hotbar.Hotbar;
 import dev.husky.hub.menus.lobby.Lobby;
 import dev.husky.hub.menus.lobby.LobbyManager;
 import dev.husky.hub.menus.server.ServerManager;
+import dev.husky.hub.outfits.Outfit;
 import dev.husky.hub.queue.QueueManager;
 import dev.husky.hub.utils.FileConfig;
 import dev.husky.hub.utils.command.CommandManager;
@@ -28,6 +29,7 @@ public class Hub extends JavaPlugin {
     private QueueManager queueManager;
     private FileManager fileManager;
     private Hotbar hotbar;
+    private Outfit outfit;
     private CommandManager commandManager;
     private ServerManager serverManager;
     private LobbyManager lobbyManager;

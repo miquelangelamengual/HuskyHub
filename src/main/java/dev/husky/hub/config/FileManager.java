@@ -23,11 +23,13 @@ public class FileManager {
     private FileConfig lobbySelectorConfig;
     private FileConfig serverSelectorConfig;
     private FileConfig messagesConfig;
+    private FileConfig outfitConfig;
 
     public void init(Hub plugin) {
         this.mainConfig = new FileConfig(plugin, "settings.yml");
         this.messagesConfig = new FileConfig(plugin, "messages.yml");
         this.hotbarConfig = new FileConfig(plugin, "hotbar.yml");
+        this.outfitConfig = new FileConfig(plugin, "outfits.yml");
 
         this.tablistConfig = new FileConfig(plugin, "provider/tablist.yml");
         this.scoreboardConfig = new FileConfig(plugin, "provider/scoreboard.yml");
