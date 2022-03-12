@@ -5,6 +5,9 @@ import dev.husky.hub.hooks.PlaceholderAPIHook;
 import dev.husky.hub.hooks.ScoreboardHook;
 import dev.husky.hub.hooks.TablistHook;
 import dev.husky.hub.hotbar.Hotbar;
+import dev.husky.hub.managers.CommandLoader;
+import dev.husky.hub.managers.ListenerLoader;
+import dev.husky.hub.managers.SpawnManager;
 import dev.husky.hub.menus.lobby.LobbyManager;
 import dev.husky.hub.menus.server.ServerManager;
 import dev.husky.hub.outfits.Outfit;
@@ -22,20 +25,31 @@ public class Hub extends JavaPlugin {
 
     private RankManager rankManager;
     private QueueManager queueManager;
-    private FileManager fileManager;
+
     private Hotbar hotbar;
     private Outfit outfit;
+
+    private FileManager fileManager;
     private CommandManager commandManager;
     private ServerManager serverManager;
     private LobbyManager lobbyManager;
+    private SpawnManager spawnManager;
+
+    private CommandLoader commandLoader;
+    private ListenerLoader listenerLoader;
 
     @Override
     public void onEnable() {
         instance = this;
+
         PlaceholderAPIHook.init();
         TablistHook.init();
         ScoreboardHook.init();
-        fileManager.init(this);
+
+        this.fileManager.init(this);
+        this.commandLoader.loadCommands();
+        this.listenerLoader.loadListeners();
+
         this.loadManagers();
     }
 
@@ -46,6 +60,7 @@ public class Hub extends JavaPlugin {
         this.commandManager = new CommandManager(this);
         this.serverManager = new ServerManager();
         this.lobbyManager = new LobbyManager();
+        this.spawnManager = new SpawnManager();
     }
 
     @Override

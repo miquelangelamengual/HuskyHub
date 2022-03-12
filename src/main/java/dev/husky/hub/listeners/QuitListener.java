@@ -20,7 +20,6 @@ public class QuitListener implements Listener {
 
     public QuitListener() {
         Bukkit.getPluginManager().registerEvents(this, Hub.getInstance());
-
     }
 
     @EventHandler

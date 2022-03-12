@@ -7,6 +7,7 @@ import dev.husky.hub.utils.ServerUtil;
 import dev.husky.hub.utils.Utils;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -42,9 +43,9 @@ public class JoinListener implements Listener {
             if (player.hasPermission(MainConfig.VIP_PERMISSION)) {
                 Bukkit.broadcastMessage(Utils.translate(MainConfig.VIP_JOIN_MESSAGE));
             }
-
         }
 
+        Hub.getInstance().getSpawnManager().teleportPlayer(player);
         Hub.getInstance().getHotbar().givePlayerItems(player);
     }
 }

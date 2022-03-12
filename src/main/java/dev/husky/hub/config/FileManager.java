@@ -23,6 +23,7 @@ public class FileManager {
     private FileConfig serverSelectorConfig;
     private FileConfig messagesConfig;
     private FileConfig outfitConfig;
+    private FileConfig locationsConfig;
 
     public void init(Hub plugin) {
         this.mainConfig = new FileConfig(plugin, "settings.yml");
@@ -35,6 +36,7 @@ public class FileManager {
 
         this.serverSelectorConfig = new FileConfig(plugin, "menus/server-selector");
         this.lobbySelectorConfig = new FileConfig(plugin, "menus/lobby-selector");
+        this.locationsConfig = new FileConfig(plugin, "data/locations.yml");
     }
 
     public void loadConfigs() {
@@ -42,6 +44,17 @@ public class FileManager {
         TablistConfig.init();
         MainConfig.init();
         MessagesConfig.init();
+    }
+
+    public void reloadConfigs() {
+        this.mainConfig.reload();
+        this.messagesConfig.reload();
+        this.hotbarConfig.reload();
+        this.outfitConfig.reload();
+        this.tablistConfig.reload();
+        this.scoreboardConfig.reload();
+        this.serverSelectorConfig.reload();
+        this.lobbySelectorConfig.reload();
     }
 
 }
