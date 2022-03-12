@@ -18,10 +18,14 @@ import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.plugin.java.JavaPlugin;
 
-@Getter @Setter
+import java.io.File;
+
+@Getter
+@Setter
 public class Hub extends JavaPlugin {
 
-    @Getter public static Hub instance;
+    @Getter
+    public static Hub instance;
 
     private RankManager rankManager;
     private QueueManager queueManager;
@@ -41,19 +45,18 @@ public class Hub extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        this.loadManagers();
 
         PlaceholderAPIHook.init();
         TablistHook.init();
         ScoreboardHook.init();
 
-        this.fileManager.init(this);
         this.commandLoader.loadCommands();
         this.listenerLoader.loadListeners();
-
-        this.loadManagers();
     }
 
     private void loadManagers() {
+        this.fileManager = new FileManager(this);
         this.rankManager = new RankManager();
         this.queueManager = new QueueManager();
         this.hotbar = new Hotbar();

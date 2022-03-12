@@ -25,7 +25,7 @@ public class FileManager {
     private FileConfig outfitConfig;
     private FileConfig locationsConfig;
 
-    public void init(Hub plugin) {
+    public FileManager(Hub plugin) {
         this.mainConfig = new FileConfig(plugin, "settings.yml");
         this.messagesConfig = new FileConfig(plugin, "messages.yml");
         this.hotbarConfig = new FileConfig(plugin, "hotbar.yml");
