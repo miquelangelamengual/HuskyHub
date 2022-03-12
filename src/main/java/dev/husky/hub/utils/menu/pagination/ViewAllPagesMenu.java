@@ -1,10 +1,10 @@
 package dev.husky.hub.utils.menu.pagination;
 
+import dev.husky.hub.utils.menu.Button;
 import dev.husky.hub.utils.menu.Menu;
 import dev.husky.hub.utils.menu.buttons.BackButton;
 import lombok.NonNull;
 import org.bukkit.entity.Player;
-import dev.husky.hub.utils.menu.Button;
 
 import java.util.HashMap;
 import java.util.Map;

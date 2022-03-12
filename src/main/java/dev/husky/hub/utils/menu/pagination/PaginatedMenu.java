@@ -1,7 +1,5 @@
 package dev.husky.hub.utils.menu.pagination;
 
-import dev.husky.hub.utils.ItemBuilder;
-import dev.husky.hub.utils.Utils;
 import dev.husky.hub.utils.menu.Button;
 import dev.husky.hub.utils.menu.Menu;
 import org.bukkit.entity.Player;

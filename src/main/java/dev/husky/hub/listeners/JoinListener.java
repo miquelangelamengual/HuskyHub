@@ -5,7 +5,6 @@ import dev.husky.hub.config.MainConfig;
 import dev.husky.hub.hooks.PlaceholderAPIHook;
 import dev.husky.hub.utils.ServerUtil;
 import dev.husky.hub.utils.Utils;
-import jdk.tools.jmod.Main;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;

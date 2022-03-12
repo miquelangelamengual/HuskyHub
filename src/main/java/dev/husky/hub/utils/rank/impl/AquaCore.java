@@ -1,6 +1,5 @@
 package dev.husky.hub.utils.rank.impl;
 
-import dev.husky.hub.Hub;
 import dev.husky.hub.utils.rank.Rank;
 import me.activated.core.api.player.GlobalPlayer;
 import me.activated.core.api.player.PlayerData;

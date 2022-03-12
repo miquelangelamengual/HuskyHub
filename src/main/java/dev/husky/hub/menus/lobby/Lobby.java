@@ -1,7 +1,6 @@
 package dev.husky.hub.menus.lobby;
 
 import dev.husky.hub.utils.ItemBuilder;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

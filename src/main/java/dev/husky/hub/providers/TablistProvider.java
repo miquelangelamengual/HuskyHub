@@ -3,10 +3,10 @@ package dev.husky.hub.providers;
 import dev.husky.hub.config.TablistConfig;
 import dev.husky.hub.hooks.PlaceholderAPIHook;
 import dev.husky.hub.utils.ServerUtil;
-import es.hulk.tablist.objects.TabColumn;
-import es.hulk.tablist.objects.TabLayout;
-import es.hulk.tablist.skin.Skin;
-import es.hulk.tablist.utils.TabProvider;
+import es.hulk.tablist.TablistAdapter;
+import es.hulk.tablist.TablistColumn;
+import es.hulk.tablist.TablistLayout;
+import es.hulk.tablist.utils.Skin;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -23,23 +23,23 @@ import java.util.Set;
  * Class: TablistProvider
  */
 
-public class TablistProvider implements TabProvider {
+public class TablistProvider implements TablistAdapter {
 
     @Override
-    public Set<TabLayout> getProvider(Player player) {
-        Set<TabLayout> layoutSet = new HashSet<>();
+    public Set<TablistLayout> getProvider(Player player) {
+        Set<TablistLayout> layoutSet = new HashSet<>();
 
         for (int i = 1; i <= 20; i++) {
-            layoutSet.add(new TabLayout(TabColumn.LEFT, i )
+            layoutSet.add(new TablistLayout(TablistColumn.LEFT, i )
                     .setText(ServerUtil.replaceText(player, TablistConfig.getLines("LEFT", i, "TEXT")))
                     .setSkin(getSkin(player, TablistConfig.getLines("LEFT", i, "SKIN"))));
-            layoutSet.add(new TabLayout(TabColumn.MIDDLE, i )
+            layoutSet.add(new TablistLayout(TablistColumn.MIDDLE, i )
                     .setText(ServerUtil.replaceText(player, TablistConfig.getLines("MIDDLE", i, "TEXT")))
                     .setSkin(getSkin(player, TablistConfig.getLines("MIDDLE", i, "SKIN"))));
-            layoutSet.add(new TabLayout(TabColumn.RIGHT, i )
+            layoutSet.add(new TablistLayout(TablistColumn.RIGHT, i )
                     .setText(ServerUtil.replaceText(player, TablistConfig.getLines("RIGHT", i, "TEXT")))
                     .setSkin(getSkin(player, TablistConfig.getLines("RIGHT", i, "SKIN"))));
-            layoutSet.add(new TabLayout(TabColumn.FAR_RIGHT, i )
+            layoutSet.add(new TablistLayout(TablistColumn.FAR_RIGHT, i )
                     .setText(ServerUtil.replaceText(player, TablistConfig.getLines("FAR_RIGHT", i, "TEXT")))
                     .setSkin(getSkin(player, TablistConfig.getLines("FAR_RIGHT", i, "SKIN"))));
         }

@@ -1,6 +1,5 @@
 package dev.husky.hub.utils.rank.impl;
 
-import dev.husky.hub.Hub;
 import dev.husky.hub.utils.rank.Rank;
 import net.luckperms.api.cacheddata.CachedMetaData;
 import net.luckperms.api.model.user.User;

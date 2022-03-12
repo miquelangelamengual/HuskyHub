@@ -5,7 +5,6 @@ import dev.husky.hub.config.ScoreboardConfig;
 import dev.husky.hub.providers.ScoreboardProvider;
 import dev.husky.hub.utils.scoreboard.Scoreboard;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.experimental.UtilityClass;
 
 /**

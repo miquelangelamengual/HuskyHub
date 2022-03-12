@@ -2,7 +2,6 @@ package dev.husky.hub.menus.server;
 
 import dev.husky.hub.Hub;
 import dev.husky.hub.utils.FileConfig;
-import dev.husky.hub.utils.Utils;
 import lombok.Getter;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;

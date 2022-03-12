@@ -1,6 +1,5 @@
 package dev.husky.hub.utils.rank.impl;
 
-import dev.husky.hub.Hub;
 import dev.husky.hub.utils.rank.Rank;
 import org.bukkit.entity.Player;
 

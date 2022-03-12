@@ -3,7 +3,7 @@ package dev.husky.hub.hooks;
 import dev.husky.hub.Hub;
 import dev.husky.hub.config.TablistConfig;
 import dev.husky.hub.providers.TablistProvider;
-import es.hulk.tablist.Porc;
+import es.hulk.tablist.Omega;
 import lombok.Getter;
 import lombok.experimental.UtilityClass;
 
@@ -17,11 +17,11 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public class TablistHook {
 
-    @Getter private Porc tablist;
+    @Getter private Omega tablist;
 
     public void init() {
         if (TablistConfig.ENABLE) {
-            tablist = new Porc(Hub.getInstance(), new TablistProvider());
+            tablist = new Omega(Hub.getInstance(), new TablistProvider());
         }
     }
 
