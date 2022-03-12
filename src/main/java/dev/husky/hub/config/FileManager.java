@@ -37,6 +37,8 @@ public class FileManager {
         this.serverSelectorConfig = new FileConfig(plugin, "menus/server-selector");
         this.lobbySelectorConfig = new FileConfig(plugin, "menus/lobby-selector");
         this.locationsConfig = new FileConfig(plugin, "data/locations.yml");
+
+        this.loadConfigs();
     }
 
     public void loadConfigs() {
